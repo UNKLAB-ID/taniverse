@@ -1,11 +1,28 @@
+import { useState } from 'react'
 import FacebookIcon from '../../assets/icons/iconst-facebook'
 import FooterLogoIcon from '../../assets/icons/iconst-footer-logo'
 import FooterIcon from '../../assets/icons/iconst-foter-secunder-logo'
 import InstragamIcon from '../../assets/icons/iconst-instragram'
 import LinkedinIcon from '../../assets/icons/iconst-linkedin'
-import XIcon from '../../assets/icons/iconst-x'
+import TiktokIcon from '../../assets/icons/iconst-tiktok'
 
 const Footer = () => {
+    const [message, setMessage] = useState('');
+    const linkedin = import.meta.env.VITE_LINKEDIN;
+    const instagram = import.meta.env.VITE_INSTAGRAM;
+    const whatsapp = import.meta.env.VITE_WHATSAPP;
+    const facebook = import.meta.env.VITE_FACEBOOK;
+    const tiktok = import.meta.env.VITE_TIKTOK;
+
+    const handleChange = () => {
+        const email = import.meta.env.VITE_EMAIL;
+        const subject = "Pesan dari Website";
+        const body = encodeURIComponent(message);
+
+        // Redirect ke email
+        window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
+    }
+
     return (
         <div className='bg-[var(--color-text-heading)] px-15  relative h-[550px] '>
             <FooterIcon className="absolute top-0 left-0" />
@@ -18,8 +35,8 @@ const Footer = () => {
                         <h1 className='text-[24px] font-bold text-[#fff] text-center my-5'>Get in Touch</h1>
                         <p className='text-[#fff] text-center'>We’re excited to hear from you. Send us your questions or <br /> feedback, and we’ll respond as soon as possible.</p>
                         <div className='bg-[#fff] w-120 m-auto mt-20 rounded-[88px] flex p-1'>
-                            <input type="text" placeholder='Enter Your Email..' className='w-full h-[56px] border-none outline-none px-4 rounded-[88px]' />
-                            <button className='bg-[var(--color-primary)] w-[200px] h-[56px] text-[#fff] font-semibold rounded-[88px]'>Subscribe</button>
+                            <input onChange={(e) => setMessage(e.target.value)} type="text" placeholder='Enter Your Email..' className='w-full h-[56px] border-none outline-none px-4 rounded-[88px]' />
+                            <button onClick={handleChange} className='bg-[var(--color-primary)] w-[200px] h-[56px] text-[#fff] font-semibold rounded-[88px]'>Subscribe</button>
                         </div>
                     </div>
                     <div>
@@ -37,12 +54,12 @@ const Footer = () => {
                                 <h1 className='text-[#fff] font-bold'>Contact</h1>
                                 <ul className='mt-5'>
                                     <li className='text-[#fff] py-1'>
-                                        <a href="mailto:bajatechnology1@gmail.com" target="_blank" rel="noopener noreferrer">
+                                        <a href={`mailto:${import.meta.env.VITE_EMAIL}`} target="_blank" rel="noopener noreferrer">
                                             bajatechnology1@gmail.com
                                         </a>
                                     </li>
                                     <li className='text-[#fff] py-1'>
-                                        <a href="https://wa.me/081908841990" target="_blank" rel="noopener noreferrer">
+                                        <a href={`${whatsapp}`} target="_blank" rel="noopener noreferrer">
                                             081908841990
                                         </a>
                                     </li>
@@ -60,16 +77,16 @@ const Footer = () => {
                         <h3 className='text-[#fff] font-bold mt-5'>Address</h3>
                         <p className='text-[#fff] py-2'>Jalan Medan Merdeka Barat No. 9 · Jakarta Pusat 10110 · Jakarta, Indonesia</p>
                         <div className='flex gap-15 mt-5'>
-                            <a href="https://www.linkedin.com/company/taniverse/" target="_blank" rel="noopener noreferrer">
+                            <a href={`${linkedin}`} target="_blank" rel="noopener noreferrer">
                                 <LinkedinIcon />
                             </a>
-                            <a href="https://wa.me/081908841990" target="_blank" rel="noopener noreferrer">
+                            <a href={`${instagram}`} target="_blank" rel="noopener noreferrer">
                                 <InstragamIcon />
                             </a>
-                            <a href="https://wa.me/081908841990" target="_blank" rel="noopener noreferrer">
-                                <XIcon />
+                            <a href={`${tiktok}`} target="_blank" rel="noopener noreferrer">
+                                <TiktokIcon />
                             </a>
-                            <a href="https://wa.me/081908841990" target="_blank" rel="noopener noreferrer">
+                            <a href={`${facebook}`} target="_blank" rel="noopener noreferrer">
                                 <FacebookIcon />
                             </a>
                         </div>

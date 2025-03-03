@@ -10,7 +10,7 @@ const Onboarding = () => {
             <h1 className="font-bold text-7xl leading-[108px] text-center text-[var(--color-text-heading)] mt-26">
                 <span className='text-[var(--color-primary)]'>Growing</span> a Better
                 <span className='text-[var(--color-primary)]'>Future</span> with <br /> Cutting-Edge Agricultural
-                <span className='text-[var(--color-primary)]'>Solutions</span>
+                <span className='text-[var(--color-primary)]'> Solutions</span>
             </h1>
             <p className='text-center text-[var(--color-text)] font-normal text-[24px] mt-5'>
                 We’re transforming agriculture with AI-driven solutions that enhance productivity and <br />
