@@ -1,0 +1,35 @@
+/* src/index.css */
+
+/* Deklarasi @font-face harus ditempatkan setelah @import */
+@import url('https://fonts.cdnfonts.com/css/satoshi');
+
+@font-face {
+  font-family: 'Satoshi';                                            
+  src: url('./assets/font/Satoshi-Regular.otf')
+}
+
+@import "tailwindcss";
+
+/* Deklarasi CSS lainnya */
+:root {
+  --font-satoshi: 'Satoshi', sans-serif;
+  --font-sato: 'Satoshi', sans-serif;
+  --color-primary: #4FD046;
+  --color-text-heading: #252525;
+  --color-text: #000000;
+  --color-background: #FFFFFF;
+}
+
+body {
+  font-family: var(--font-satoshi);
+}
+
+.scrollbar-none::-webkit-scrollbar {
+  display: none; /* Untuk browser berbasis WebKit */
+}
+
+.scrollbar-none {
+  -ms-overflow-style: none; /* Untuk Internet Explorer */
+  scrollbar-width: none; /* Untuk Firefox */
+}
+
