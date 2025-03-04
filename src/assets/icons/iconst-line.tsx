@@ -9,7 +9,7 @@ const LineIcon = ({ className }: { className?: string }) => (
         className={className}
     >
         <rect
-            width="712"
+            width="1712"
             height="3"
             x="0.5"
             y="0.5"

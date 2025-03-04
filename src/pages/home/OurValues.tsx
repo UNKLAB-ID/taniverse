@@ -1,48 +1,62 @@
 import SvgIconLeft from "../../assets/icons/iconst-left";
 import SvgIconRigth from "../../assets/icons/iconst-rigth";
-import ListImage from "../../assets/images/list-componen.svg";
 import { useRef, useEffect, useState } from "react";
 import LogoSecunderIcon from "../../assets/icons/iconst-logo-secunder";
 import LineIcon from "../../assets/icons/iconst-line";
-import AiIcon from "../../assets/icons/iconst-ai";
-import MediaIcon from "../../assets/icons/iconst-media";
-import DistributorIcon from "../../assets/icons/iconst-distributtor";
-import ECommerceIcon from "../../assets/icons/iconst-e-commerce";
-import NewsIcons from "../../assets/icons/iconst-news";
+import iconMedia1 from "../../assets/images/icon-value-media1.svg";
+import iconMedia2 from "../../assets/images/icon-value-media2.svg";
+import iconMedia3 from "../../assets/images/icon-value-media3.svg";
+import icontCommerce1 from "../../assets/images/icont-commerce1.svg";
+import icontCommerce2 from "../../assets/images/icont-commerce2.svg";
+import icontCommerce3 from "../../assets/images/icont-commerce3.svg";
+import icontAi1 from "../../assets/images/icont-ai1.svg";
+import icontAi2 from "../../assets/images/icont-ai2.svg";
+import icontAi3 from "../../assets/images/icont-ia3.svg";
+import iconAgen1 from "../../assets/images/icont-agen1.svg"
+import iconAgen2 from "../../assets/images/icont-agen2.svg"
+import iconAgen3 from "../../assets/images/icon-agen3.svg"
+import iconNews1 from "../../assets/images/icont-news1.svg"
+import iconNews2 from "../../assets/images/icont-news2.svg"
+import iconNews3 from "../../assets/images/icont-news3.svg"
+import imageMedia from "../../assets/images/iamge-media.svg"
+import imageAi from "../../assets/images/image-ai.svg"
+import imageECommerce from "../../assets/images/image-e-commerce.svg"
+import imageAgen from "../../assets/images/image-agen.svg"
+import imageNews from "../../assets/images/image-news.svg"
 
 const data = [
   {
     label: "Social media",
-    image: <MediaIcon />,
-    list: [ListImage, ListImage, ListImage],
+    image: imageMedia,
+    list: [iconMedia1, iconMedia2, iconMedia3],
     description:
       "Build strong networks and strategic partnerships with companies, farmers, and stakeholders to create mutually beneficial synergies.",
   },
   {
     label: "E-Commerce",
-    image: <ECommerceIcon />,
-    list: [ListImage, ListImage, ListImage],
+    image: imageECommerce,
+    list: [icontCommerce1, icontCommerce2, icontCommerce3],
     description:
       "Simplify the buying and selling of agricultural products online, with a secure platform that ensures a smooth and reliable transaction process every time.",
   },
   {
     label: "AI Agriculture",
-    image: <AiIcon />,
-    list: [ListImage, ListImage, ListImage],
+    image: imageAi,
+    list: [icontAi1, icontAi2, icontAi3],
     description:
       "Leverage advanced AI technology to accurately detect pests, diseases, and soil conditions, helping you make informed decisions to enhance crop health and maximize yields.",
   },
   {
     label: "Digital Distributors & Agents",
-    image: <DistributorIcon />,
-    list: [ListImage, ListImage, ListImage],
+    image: imageAgen,
+    list: [iconAgen1, iconAgen2, iconAgen3],
     description:
       "Easily manage and track the distribution of agricultural products in real-time, ensuring timely deliveries and optimizing your supply chain for maximum efficiency.",
   },
   {
     label: "Agricultural News & Research",
-    image: <NewsIcons />,
-    list: [ListImage, ListImage, ListImage],
+    image: imageNews,
+    list: [iconNews1, iconNews2, iconNews3],
     description:
       "Access the latest information on global and local markets, research, and business opportunities in agriculture to keep you informed and support better decision-making",
   },
@@ -87,64 +101,75 @@ const OurValue = () => {
   }, [isScrolling]);
 
   return (
-    <div className="mx-15 my-30 ">
+    <div className="mx-auto my-10 px-4 md:px-8 lg:px-16 xl:pb-20 pt-0 md:pt-10 lg:pt-20 max-w-screen-xl">
       <div
         ref={scrollRef}
-        className="flex overflow-x-auto scroll-smooth snap-x snap-mandatory w-full h-screen scrollbar-none"
+        className="flex overflow-x-auto scroll-smooth snap-x snap-mandatory w-full h-auto scrollbar-none"
       >
         {[...data, ...data].map((item, index) => (
           <div
-            className="w-full mx-4 flex-shrink-0 grid grid-cols-2 gap-4 snap-center"
+            className="w-full flex-shrink-0 grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 snap-center"
             key={index}
           >
-            {/* Baris pertama */}
-            <div
-              // style={{ backgroundImage: `url(${item.image})` }}
-              className="col-end-2 flex items-center justify-center object-cover  h-[500px] bg-cover bg-center rounded-[16px]"
-            >
-              {item.image}
+            {/* Gambar */}
+            <div className="flex items-center justify-center h-[200px] md:h-[300px] lg:h-full rounded-[16px] overflow-hidden">
+              <img
+                src={item.image}
+                alt="image border"
+                className="w-full h-full object-cover"
+              />
             </div>
-            <div className="flex items-center h-[500px] justify-center">
+
+            {/* Konten */}
+            <div className="flex items-center justify-center">
               <div className="w-full">
-                <div className="flex justify-between w-full items-center">
-                  <h3 className="text-[24px] mr-1">Our Values</h3>
-                  <LineIcon className="w-[450px]" />
+                <div className="flex justify-between items-center mb-5 flex-wrap">
+                  <h3 className="text-lg md:text-xl lg:text-2xl font-semibold min-w-fit">
+                    Our Values
+                  </h3>
+                  <LineIcon className="w-[100%] lg:w-[100%]" />
                 </div>
-                <div className="flex gap-4 my-3">
+
+
+                {/* Tombol Navigasi */}
+                <div className="flex gap-4 my-3 justify-between lg:justify-start">
                   <button
-                    className={`border w-[80px] h-[48px] rounded-[80px] flex justify-center items-center border-[var(--color-primary)]`}
-                    onClick={() => scroll("left")}
+                    className="border w-[50px] md:w-[70px] lg:w-[80px] h-[40px] md:h-[48px] rounded-full flex justify-center items-center border-[var(--color-primary)]"
+                    onClick={() => scroll('left')}
                   >
                     <SvgIconLeft />
                   </button>
                   <button
-                    className={`border w-[80px] h-[48px] rounded-[80px] flex justify-center items-center border-[var(--color-primary)]`}
-                    onClick={() => scroll("right")}
+                    className="border w-[50px] md:w-[70px] lg:w-[80px] h-[40px] md:h-[48px] rounded-full flex justify-center items-center border-[var(--color-primary)]"
+                    onClick={() => scroll('right')}
                   >
                     <SvgIconRigth />
                   </button>
                 </div>
-                <h1 className="font-bold text-[46px] leading-[48px] text-[var(--color-text-heading)]">
+
+                {/* Judul dan Deskripsi */}
+                <h1 className="font-bold text-xl md:text-3xl lg:text-4xl leading-tight text-[var(--color-text-heading)]">
                   {item.label}
                 </h1>
-                <p className="text-[24px] text-[#8A8A8A] text-justify my-3">
+                <p className="text-sm md:text-lg text-[#8A8A8A] text-justify my-3 min-w-0">
                   {item.description}
                 </p>
 
-                <div className="flex gap-4 ">
+                {/* List */}
+                <div className="flex gap-4 flex-wrap justify-center lg:justify-start">
                   {item.list.map((list, id) => (
                     <div
                       key={id}
-                      className="relative w-[166px] h-[166px] rounded-[16px]"
+                      className="relative w-[100px] md:w-[130px] lg:w-[166px] h-[100px] md:h-[130px] lg:h-[166px] rounded-[16px]"
                     >
-                      <div className="absolute inset-0 bg-gradient-to-b from-[#4FD046] to-[rgba(102,102,102,0)] bg-opacity-50 w-[165] h-[51px] rounded-[16px]"></div>
+                      <div className="absolute top-0 left-0 w-full h-[50%] bg-gradient-to-b from-[#4FD046] to-[rgba(102,102,102,0)] bg-opacity-50 rounded-[10px]"></div>
+
                       <img
                         src={list}
                         alt="list"
                         className="w-full h-full object-cover rounded-lg"
                       />
-
-                      <LogoSecunderIcon className="absolute top-2 left-1/2 transform -translate-x-1/2 w-[110.6px] h-[28px]" />
+                      <LogoSecunderIcon className="absolute top-2 left-1/2 transform -translate-x-1/2 w-[80px] md:w-[100px] lg:w-[110.6px]" />
                     </div>
                   ))}
                 </div>
@@ -154,6 +179,7 @@ const OurValue = () => {
         ))}
       </div>
     </div>
+
   );
 };
 
