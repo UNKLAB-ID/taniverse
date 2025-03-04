@@ -1,5 +1,4 @@
 /* src/index.css */
-@import "tailwindcss";
 
 /* Deklarasi @font-face harus ditempatkan setelah @import */
 @import url('https://fonts.cdnfonts.com/css/satoshi');
@@ -8,6 +7,8 @@
   font-family: 'Satoshi';                                            
   src: url('./assets/font/Satoshi-Regular.otf')
 }
+
+@import "tailwindcss";
 
 /* Deklarasi CSS lainnya */
 :root {

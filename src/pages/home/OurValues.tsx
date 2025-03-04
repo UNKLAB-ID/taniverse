@@ -3,7 +3,6 @@ import SvgIconRigth from "../../assets/icons/iconst-rigth";
 import { useRef, useEffect, useState } from "react";
 import LogoSecunderIcon from "../../assets/icons/iconst-logo-secunder";
 import LineIcon from "../../assets/icons/iconst-line";
-import AiIcon from "../../assets/icons/iconst-ai";
 import iconMedia1 from "../../assets/images/icon-value-media1.svg";
 import iconMedia2 from "../../assets/images/icon-value-media2.svg";
 import iconMedia3 from "../../assets/images/icon-value-media3.svg";

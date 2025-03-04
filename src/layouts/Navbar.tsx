@@ -6,7 +6,7 @@ import NavbarMenuIcon from '../assets/icons/iconst-nav-line';
 import CloseIcon from '../assets/icons/iconst-close';
 
 const Navbar: React.FC = () => {
-    const { isVisible, setIsVisible } = useNavbarStore();
+    const { setIsVisible } = useNavbarStore();
     const [isMenuOpen, setIsMenuOpen] = useState(false); // State untuk drawer menu
 
     useEffect(() => {
