@@ -1,8 +1,5 @@
 /* src/index.css */
 @import "tailwindcss";
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
 
 /* Deklarasi @font-face harus ditempatkan setelah @import */
 @import url('https://fonts.cdnfonts.com/css/satoshi');
@@ -24,7 +21,6 @@
 
 body {
   font-family: var(--font-satoshi);
-  @apply min-w-[360px] overflow-x-hidden;
 }
 
 .scrollbar-none::-webkit-scrollbar {
