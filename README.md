@@ -52,3 +52,32 @@ export default tseslint.config({
   },
 })
 ```
+## Arsitectur
+
+```
+my-project/
+│── public/               # Static assets (favicon, images, etc.)
+│── src/
+│   │── assets/           # Static files, images, svgs
+│   │── components/       # Reusable UI components
+│   │── hooks/            # Custom hooks
+│   │── layouts/          # Layout components (Navbar, Sidebar, etc.)
+│   │── pages/            # Page components (Home, About, Dashboard, etc.)
+│   │── routes/           # Routing configuration
+│   │── services/         # API calls & services (axios, fetch, etc.)
+│   │── store/            # State management (Zustand, Redux, etc.)
+│   │── styles/           # Global styles, Tailwind utilities
+│   │── types/            # TypeScript types & interfaces
+│   │── utils/            # Helper functions
+│   │── App.tsx           # Root component
+│   │── main.tsx          # Entry point
+│── .eslintrc.cjs         # ESLint configuration
+│── .prettierrc           # Prettier configuration
+│── index.html            # Main HTML template
+│── package.json          # Dependencies & scripts
+│── postcss.config.js     # PostCSS configuration (for Tailwind)
+│── tailwind.config.ts    # Tailwind CSS configuration
+│── tsconfig.json         # TypeScript configuration
+│── vite.config.ts        # Vite configuration
+└── README.md             # Project documentation
+```

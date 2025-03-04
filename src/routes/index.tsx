@@ -5,9 +5,12 @@ import Navbar from '../layouts/Navbar';
 import Home from '../layouts/home/Home';
 
 const AppRoutes = () => (
-    <div>
+    <div className="w-full relative overflow-hidden min-h-screen "> {/* Tambahkan min-h-screen agar content tetap penuh */}
         <Router>
-            <Navbar />
+            <div className="relative max-w-screen-xl mx-auto">
+                <Navbar />
+            </div>
+
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route element={<ProtectedRoute />}>
