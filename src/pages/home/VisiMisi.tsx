@@ -71,7 +71,7 @@ const VisiMisi: React.FC = () => {
                         Misi
                     </h1>
                     <p className="text-[18px] md:text-[24px] text-justify">
-                        Tani Pintar is dedicated to developing an integrated digital platform that connects farmers with global markets, boosts productivity and income through technology and innovation, builds a sustainable network of farmers, distributors, and consumers, and provides educational and training services to enhance farmers' skills.
+                        Tani Verse is dedicated to developing an integrated digital platform that connects farmers with global markets, boosts productivity and income through technology and innovation, builds a sustainable network of farmers, distributors, and consumers, and provides educational and training services to enhance farmers' skills.
                     </p>
                 </div>
             </div>
