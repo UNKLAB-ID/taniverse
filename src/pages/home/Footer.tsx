@@ -42,7 +42,7 @@ const Footer = () => {
                         <FooterLogoIcon className="mx-auto md:mx-0" />
                         <h1 className='text-[24px] font-bold text-white my-5'>Get in Touch</h1>
                         <p className='text-white'>We’re excited to hear from you. Send us your questions or feedback, and we’ll respond as soon as possible.</p>
-                        <div className='bg-white w-full md:w-3/4 lg:w-1/2 m-auto md:m-0 mt-6 rounded-full flex p-1'>
+                        <div className='bg-white w-full md:w-3/4 lg:w-1/2 m-auto md:m-0 mt-6 md:mt-[100px] rounded-full flex p-1'>
                             <input onChange={(e) => setMessage(e.target.value)} type="text" placeholder='Enter Your Email..' className='w-full h-12 border-none outline-none px-4 rounded-full' />
                             <button onClick={handleChange} className='bg-[var(--color-primary)] w-32 h-12 text-white font-semibold rounded-full'>Subscribe</button>
                         </div>
@@ -75,7 +75,7 @@ const Footer = () => {
                             </div>
                         </div>
                         <h3 className='text-white font-bold mt-6'>Address</h3>
-                        <p className='text-white py-2'>Jalan Medan Merdeka Barat No. 9, Jakarta Pusat 10110, Jakarta, Indonesia</p>
+                        <p className='text-white py-2'>Surabaya, Indonesia</p>
                         <div className='flex justify-center md:justify-start gap-4 mt-4'>
                             <a href={linkedin} target="_blank" rel="noopener noreferrer"><LinkedinIcon /></a>
                             <a href={instagram} target="_blank" rel="noopener noreferrer"><InstragamIcon /></a>
